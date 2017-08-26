@@ -3,10 +3,20 @@
 $db = array();
 $site = array();
 
+function loginAdmin($username, $password){
+	$query = db_query('SELECT * FROM `admin` WHERE username = "' . $username . '"');
+	while ($row = mysqli_fetch_assoc($query)) { 
+		if(password_verify($password, $row['passwordhash'])){
+			return $row;
+		}
+	}
+	return 0;	
+}
+
 	function getUserFromID($id){
 		$query = db_query('SELECT * FROM `users` WHERE id = ' . $id);
     while ($row = mysqli_fetch_assoc($query)) { 
-			return $row['displayname'];
+			return $row;
 		}	
 	}
 

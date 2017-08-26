@@ -17,7 +17,7 @@ function showCommentsOnPost(element){
 <?php foreach($db['posts'] as $post) { ?>
 	<div class="post">
 			<img src="<?php echo IMAGE_DIR . "profile.png"; ?>" class="postOwnerPhoto"></img>
-			<span class="postOwner" ><h3><?php echo getUserFromID($post['userid']);?></h3></span>
+			<span class="postOwner" ><h3><?php echo getUserFromID($post['userid'])['displayname'];?></h3></span>
 			<span class="postTitle" ><h4><?php echo $post['title'];?></h4></span>
 			<p class="postText" ><?php echo htmlspecialchars($post['text']);?></p>
 			<div class="comments">

@@ -40,6 +40,26 @@ input[type=text], input[type=password]{
 	border: 1px solid #ddd;
 	border-radius: 3px;
 	min-width: 270px;
+	outline: none;
+}
+
+input[type=text], input[type=password]{
+	padding: 10px;
+	background-color: #eee;
+	color: #000;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	min-width: 270px;
+	outline: none;
+	transition: 0.2s;
+}
+
+input[type=text]:hover, input[type=password]:hover{
+	border: 1px solid #aaa;
+}
+
+input[type=text]:focus, input[type=password]:focus{
+	border: 1px solid #03f;
 }
 
 a{
