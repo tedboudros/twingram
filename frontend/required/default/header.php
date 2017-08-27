@@ -4,6 +4,24 @@
 	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/jquery.js"></script>
 	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/javascript.js"></script>
 	<title><?php echo $site['site-title']; ?></title>
+	<script>
+		$(document).ready(function () {
+			$(".headerButton[title=Logout]").click(function () { //To logout
+				$.ajax({
+						type: "POST",
+						url: "<?php echo ENGINE_DIR; ?>destroysession.php"
+					})
+					.done(function (msg) {
+						var string = window.location.href;
+						if(string.includes("/admin")){
+							window.location.replace("/admin");
+						}else{
+							window.location.replace("/");
+						}
+					});
+			});
+		});
+	</script>
 </head>
 <body>
 	<header>

@@ -15,6 +15,7 @@
              <?php
         }else{
             $_SESSION = array_merge($_SESSION, $login);
+            header("location: /admin");
         }
     }
             ?>
