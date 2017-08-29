@@ -19,7 +19,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
+	transition: 0.2s;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -322,7 +322,6 @@ footer {
 	transition: 0.3s;
 }
 .buttonLink:hover {
-	
 	background-color: #777;
 	color: #fff;
 }
@@ -398,4 +397,15 @@ hr {
 	  height: calc(100% - 60px);
 	  border-right: 1px solid #ddd;
 	  background-color: #fff;
+	  box-shadow: 0 6px 0px #ddd;
+  }
+  .sidebarItem {
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 17px;
+	font-weight: 200;
+  }
+  .sidebarItem:hover {
+	background-color: #ddd;
   }
