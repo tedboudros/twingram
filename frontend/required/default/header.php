@@ -41,4 +41,5 @@
 		</div>
 	</header>
 	<div id="content">
+	<div id="contentspace"></div>
 	
