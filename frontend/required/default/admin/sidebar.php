@@ -1,14 +1,23 @@
 <div id="sidebar">
-    <div class="sidebarItem">
-        <i class="fa fa-user"></i></i> Users 
-    </div>
-    <div class="sidebarItem">
+
+    <a href="/admin?adminpath=dashboard" class="sidebarItem">
+        <i class="fa fa-dashboard"></i></i> Dashboard 
+    </a>
+
+    <a href="/admin?adminpath=users" class="sidebarItem">
+        <i class="fa fa-address-book"></i></i> Users 
+    </a>
+
+    <a href="/admin?adminpath=posts" class="sidebarItem">
         <i class="fa fa-edit"></i> Posts
-    </div>
-    <div class="sidebarItem">
+    </a>
+
+    <a href="/admin?adminpath=design" class="sidebarItem">
         <i class="fa fa-magic"></i> Design
-    </div>
-    <div class="sidebarItem">
+    </a>
+
+    <a href="/admin?adminpath=settings" class="sidebarItem">
         <i class="fa fa-cog"></i> Settings
-    </div>
+    </a>
+
 </div>

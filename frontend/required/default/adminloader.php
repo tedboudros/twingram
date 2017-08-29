@@ -7,7 +7,9 @@ if(isset($_SESSION['displayName'])){
 if(isset($_GET['adminpath'])){
     
     if(isset($_SESSION['displayName'])){
+        ?> <div id="admincontainer"> <?php
         include_once DEFAULT_THEME_DIR . "admin/" . $_GET['adminpath'] . ".php";
+        ?> </div> <?php
     }else{
         header("location: /admin");
     }

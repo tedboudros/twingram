@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.2
 -- https://www.phpmyadmin.net/
 --
--- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 23 Αυγ 2017 στις 12:53:11
--- Έκδοση διακομιστή: 10.1.24-MariaDB
--- Έκδοση PHP: 7.1.6
+-- Φιλοξενητής: localhost
+-- Χρόνος δημιουργίας: 29 Αυγ 2017 στις 22:37:24
+-- Έκδοση διακομιστή: 10.1.26-MariaDB
+-- Έκδοση PHP: 7.0.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Βάση δεδομένων: `sm`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `displayName` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `passwordhash` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `admin`
+--
+
+INSERT INTO `admin` (`id`, `displayName`, `username`, `passwordhash`, `date`) VALUES
+(1, 'theodore', 'admin', '$2y$10$maSiS7hgTPTiNccSw0RSAuCenQlTIXR71cuoiQYgZxo0OQe4FRHK6', '2017-08-26 04:44:17');
 
 -- --------------------------------------------------------
 
@@ -64,7 +85,7 @@ INSERT INTO `pages` (`id`, `pageName`, `pages`, `date`) VALUES
 (1, 'homepage', '[\"header.php\",\"post.php\",\"posts.php\"]', '2017-08-22 03:49:07'),
 (2, '404', '[\"header.php\",\"404.php\",\"footer.php\"]', '2017-08-22 03:49:27'),
 (3, 'profile', '[\"header.php\",\"footer.php\"]', '2017-08-22 03:49:42'),
-(4, 'admin', '[\"header.php\",\"admin.php\"]', '2017-08-23 13:49:31');
+(4, 'admin', '[\"header.php\",\"adminloader.php\"]', '2017-08-23 13:49:31');
 
 -- --------------------------------------------------------
 
@@ -132,11 +153,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `passhash`, `displayname`, `image`, `bigimage`, `date`) VALUES
-(1, 'theodoreboudros', '$2y$10$zAI3Eu86j9S3HgoAlGLBaux65Zn.jZz2zlEnYSNbyauJX824Px882', 'Theodore Boudros', 'profile.png', 'profile.png', '2017-08-20 18:39:57');
+(1, 'theodoreboudros', '', 'Theodore Boudros', 'profile.png', 'profile.png', '2017-08-20 18:39:57');
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
 --
+
+--
+-- Ευρετήρια για πίνακα `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Ευρετήρια για πίνακα `comments`
@@ -172,6 +199,11 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT για άχρηστους πίνακες
 --
 
+--
+-- AUTO_INCREMENT για πίνακα `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT για πίνακα `comments`
 --
