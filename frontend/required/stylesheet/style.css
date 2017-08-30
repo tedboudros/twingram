@@ -461,18 +461,25 @@ hr {
 	border-radius: 3px;
 	box-shadow: 0 0 6px #aaa;
 	margin: 20px;
+	text-align: center;
 }
 .admintable td{
-	border: 1px solid #ccc;
+	
 	padding: 10px;
 	max-width: 300px;
+	height: 60px;
+}
+.admintable tr:hover > td{
+	background: #b3e5fc;
 }
 .admintable th {
 	margin: 5px;
-	padding: 10px;
-	background-color: #444;
-	color: #ddd;
+	padding: 20px;
+	background-color: #fff;
+	color: #444;
 	font-weight: 200;
+	border-bottom: 1px solid #ccc;
 }
 .admintable tr:nth-child(even) {background: #fff}
-.admintable tr:nth-child(odd) {background: #ddd}
+.admintable tbody:hover > tr:nth-child(odd) {background: #fff}
+.admintable tr:nth-child(odd) {background: #e1f5fe}
