@@ -68,3 +68,11 @@ function loginAdmin($username, $password){
 	while ($row = mysqli_fetch_assoc($query)) { 
 		$pages[$row['pageName']] = json_decode($row['pages']);
 	}
+
+	$users = array();
+	$query = db_query('SELECT * FROM `users`');
+    while ($row = mysqli_fetch_assoc($query)) { 
+		array_push($users, $row);
+	}
+	$db['users'] = $users;
+	 unset($users);
