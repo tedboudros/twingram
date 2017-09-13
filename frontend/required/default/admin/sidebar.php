@@ -16,6 +16,10 @@
         <i class="fa fa-magic"></i> Design
     </a>
 
+    <a href="/admin?adminpath=statistics" class="sidebarItem">
+        <i class="fa fa-bar-chart"></i> Statistics
+    </a>
+
     <a href="/admin?adminpath=settings" class="sidebarItem">
         <i class="fa fa-cog"></i> Settings
     </a>

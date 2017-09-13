@@ -3,6 +3,7 @@
 	<link href="<?php echo FRONTEND_DIR; ?>required/scripts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/jquery.js"></script>
 	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/javascript.js"></script>
+	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/tracking.js"></script>
 	<title><?php echo $site['site-title']; ?></title>
 	<script>
 		$(document).ready(function () {

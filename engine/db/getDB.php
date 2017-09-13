@@ -47,6 +47,14 @@ function loginAdmin($username, $password){
 		return $comments;
 	}
 
+	// New post
+
+	if(isset($_POST['postText']) && $_POST['postText'] != "" && $_POST['postTitle'] != ""){
+		$query = db_query('INSERT INTO `posts` (`id`, `userid`, `title`, `text`, `date`) VALUES (NULL, "1", "' . $_POST['postTitle'] . '", "' . $_POST['postText'] . '", CURRENT_TIMESTAMP)');
+		header("location: /");
+	}
+
+
 	// POSTS
 	$posts = array();
 	$query = db_query('SELECT * FROM `posts`');

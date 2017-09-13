@@ -1,13 +1,15 @@
-
+<form method="POST" action="">
 <div class="post Upost">
-	<span class="postTitle UpostTitle"><h2>Post:</h2></span>
-	<textarea class="UpostText"></textarea>
+<center><span class="postTitle UpostTitle"><h2>Create a Post:</h2></span></center>
+	<textarea placeholder="Title: " name="postTitle" style="height: 40px;" rows="1" class="UpostText"></textarea>
+	<textarea placeholder="Content: " name="postText" class="UpostText"></textarea>
 	<div class="react">
 				<button class="reactButton UreactButton" data-toggle="tooltip" title="Love" onclick="" data-original-title="Love">
 					<i class="fa fa-user"></i>
 				</button>
-				<button style="border-right: 0;" class="reactButton UreactButton" onclick="Post($(this).parent().parent().children('.UpostText');)" data-toggle="tooltip" title="Post" data-original-title="Post">
+				<input type="submit" style="border-right: 0;" class="reactButton UreactButton" value="Post" data-toggle="tooltip" title="Post" data-original-title="Post">
 					<i class="fa fa-download"></i>
-				</button>
+				</input>
 			</div>
 </div>
+</form>

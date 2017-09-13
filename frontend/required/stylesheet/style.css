@@ -196,8 +196,8 @@ header {
 }
 .UpostTitle {
 	color: #666;
-	float: left;
-	text-align: left;
+	text-align: center;
+	width: 100%;
 }
 .UpostTitle h2 {
 	font-weight: lighter;
@@ -263,7 +263,7 @@ header {
 	padding: 0;
 	border-top: 1px solid #ddd;
 }
-.reactButton {
+.reactButton{
 	width: 300px;
 	height: 40px;
 	margin: 0;
@@ -278,6 +278,17 @@ header {
 	bottom: 0;
 	outline: 0;
 }
+.react > input[type=submit]{
+	background: #eee;
+	color: #666;
+}
+
+.react > input[type=submit]:hover {
+	background: #e0e0e0;
+	transition: 0.2s;
+	color: #000;
+}
+
 .UreactButton{
 	width: 450px;
 }
@@ -435,7 +446,7 @@ hr {
 	  height: 200px;
 	  border: 1px solid #ddd;
 	  box-shadow: 0 0px 6px #ccc;
-	  background-color: #0A337D;
+	  background: #e1f5fe;
 	  color: #000;
 	  border-radius: 3px;
 	  margin: 20px;
@@ -453,13 +464,12 @@ hr {
 	font-size: 120px;
 	font-weight: 600;
 	margin: 0;
-	color: #fff;
 	padding: 10px;
 }
 .admintable{
-	border: 1px solid #aaa;
+	border: 1px solid #ddd;
+    box-shadow: 0 0px 6px #ccc;
 	border-radius: 3px;
-	box-shadow: 0 0 6px #aaa;
 	margin: 20px;
 	text-align: center;
 }
