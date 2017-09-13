@@ -446,8 +446,8 @@ hr {
 	  height: 200px;
 	  border: 1px solid #ddd;
 	  box-shadow: 0 0px 6px #ccc;
-	  background: #e1f5fe;
-	  color: #000;
+	  background: #0077ff;
+	  color: #fff;
 	  border-radius: 3px;
 	  margin: 20px;
 
@@ -458,6 +458,7 @@ hr {
 	padding: 10px;
 	border-bottom: 1px solid #000;
 	background-color: #fff;
+	color: #666;
 	margin: 0;
 }
 .dashboardItem h1{
@@ -480,7 +481,8 @@ hr {
 	height: 60px;
 }
 .admintable tr:hover > td{
-	background: #b3e5fc;
+	background: #0077ff;
+	color: #fff;
 }
 .admintable th {
 	margin: 5px;
@@ -490,6 +492,6 @@ hr {
 	font-weight: 200;
 	border-bottom: 1px solid #ccc;
 }
-.admintable tr:nth-child(even) {background: #fff}
-.admintable tbody:hover > tr:nth-child(odd) {background: #fff}
-.admintable tr:nth-child(odd) {background: #e1f5fe}
+.admintable tr:nth-child(even) {background: #fff; color: #666;}
+.admintable tbody:hover > tr:nth-child(odd) {background: #fff; color: #666;}
+.admintable tr:nth-child(odd) {background: #0077ff; color: #fff;}
