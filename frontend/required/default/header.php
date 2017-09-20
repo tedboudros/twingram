@@ -6,6 +6,17 @@
 	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/tracking.js"></script>
 	<title><?php echo $site['site-title']; ?></title>
 	<script>
+
+
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();    
+			if (scroll > 80) {
+				$("header").addClass("headerScrolled");
+			}else{
+				$("header").removeClass("headerScrolled");
+			}
+		});
+
 		$(document).ready(function () {
 			$(".headerButton[title=Logout]").click(function () { //To logout
 				$.ajax({
@@ -28,9 +39,12 @@
 	<header>
 		<?php if ($site['iflogo'] == 1){ ?>
 			<img id="site-title" style="padding: 0;" src="<?php echo IMAGE_DIR . $site['site-name']; ?>"></img>
-		<?php }else{?>
+		<?php }else{ ?>
 			<span id="site-title"><h1><?php echo $site['site-name']; ?></h1></span>
 		<?php } ?>
+		<div id="search">
+			<input type="text" placeholder="Search" id="searchInput"></input>
+		</div>
 		<div id="headerRight">
 			<div class="headerButton">
 				<img class="userPhoto" src="<?php echo IMAGE_DIR . "profile.png"; ?>"></img>
