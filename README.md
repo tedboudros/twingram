@@ -13,3 +13,17 @@
 
 <li>Delete the installer folder.</li>
 </ul>
+
+
+<b>Admin login:</b>
+
+
+Username: admin <br/> Password: password
+
+
+
+
+<b>User login:</b>
+
+
+Username: user <br/> Password: password
