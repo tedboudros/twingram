@@ -26,13 +26,13 @@ function showCommentsOnPost(element){
 				<?php } ?>
 			</div>
 			<div class="react">
-				<button class="reactButton" data-toggle="tooltip" title="Like" onclick="" data-original-title="Like">
+				<button class="reactButton _thumbsup" data-toggle="tooltip" title="Like" onclick="" data-original-title="Like">
 					<i class="fa fa-thumbs-up"></i>
 				</button>
-				<button class="reactButton" data-toggle="tooltip" title="Love" onclick="" data-original-title="Love">
+				<button class="reactButton _heart" data-toggle="tooltip" title="Love" onclick="" data-original-title="Love">
 					<i class="fa fa-heart"></i>
 				</button>
-				<button style="border-right: 0;" class="reactButton" onclick="showCommentsOnPost($(this));" data-toggle="tooltip" title="Comment" data-original-title="Comment">
+				<button class="reactButton _comments" onclick="showCommentsOnPost($(this));" data-toggle="tooltip" title="Comment" data-original-title="Comment">
 					<i class="fa fa-comment"></i>
 				</button>
 			</div>

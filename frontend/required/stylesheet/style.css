@@ -19,7 +19,6 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	transition: 0.2s;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -35,6 +34,7 @@ input[type=submit]{
 	color: #fff;
 	border: 0;
 	border-radius: 3px;
+	outline: none;
 }
 
 input[type=text], input[type=password]{
@@ -92,15 +92,17 @@ header {
 	color: #655dff;
 	display: inline-block;
 	margin: 0;
-	padding-top: 15px;
-	padding-left: 15px;
 	height: 59px;
-	width: 180px;
 	border-right: 1px solid #ddd;
 	cursor: pointer;
 	background-color: #fff;
+	max-width: 200px;
 }
-
+#site-title > img{
+	background-size: contain;
+	height: 50px;
+	margin: 5px 15px;
+}
 #site-title h1{
 	margin: 0;
 	font-weight: 200;
@@ -111,7 +113,7 @@ header {
 }
 
 #search{
-	width: 400px;
+	width: 300px;
     height: 59px;
     display: inline-block;
 	margin: 0;
@@ -121,14 +123,14 @@ header {
 
 #searchInput{
 	display: inline-block;
-	width: 350px;
+	width: 250px;
 	height: 40px;
 	margin: 10px 25px;
-	background-color: rgba(180,180,180,0.4);
+	background-color: rgba(200,200,200,0.4);
 }
 
 #searchInput:focus {
-	background-color: #dfdfdf;
+	background-color: #eee;
 	transition: 0.2s;
 }
 
@@ -138,7 +140,7 @@ header {
 	display: inline-block;
 }
 .headerButton {
-	min-width: 120px;
+	min-width: 60px;
 	height: 60px;
 	margin: 0;
 	float: left;
@@ -167,14 +169,14 @@ header {
 
 }
 .post {
-	width: 902px;
+	width: 802px;
 	min-height: 200px;
 	display: block;
 	margin: 30 auto;
 	background-color: #fff;
 	border-radius: 3px;
 	border: 1px solid #e0e0e0;
-	box-shadow: outset 0 0 20px -10px black;
+	box-shadow: 0 5px 10px -2px #888;
 }
 
 .Upost {
@@ -183,7 +185,7 @@ header {
 }
 .UpostText {
 	display: block;
-	width: 860px;
+	width: 760px;
 	height: 160px;
 	max-width: 860px;
 	margin: 20px;
@@ -204,8 +206,7 @@ header {
 	border: 1px solid #03f;
 }
 .postTitle {
-	padding: 20px;
-	padding-top: 2px;
+	padding: 2px 20px 10px 20px;
 	display: block;
     font-size: 1.5em;
     font-weight: 300;
@@ -258,7 +259,7 @@ header {
 	display: block;
 }
 .comments {
-	width: 900px;
+	width: 800px;
 	left: 0;
 	height: 0px;
 	margin-top: 30px;
@@ -270,9 +271,9 @@ header {
 	border-top: 1px solid #ddd;
 }
 .react {
-	width: 900px;
+	width: 800px;
 	left: 0;
-	height: 40px;
+	height: 60px;
 	display: block;
 	position: relative;
     background-color: #eee;
@@ -282,20 +283,20 @@ header {
 	border-top: 1px solid #ddd;
 }
 .reactButton{
-	width: 300px;
+	width: 40px;
 	height: 40px;
 	margin: 0;
-	float: left;
 	padding: 0;
+	border-radius: 40px;
+	border: 1px solid #ddd;
 	display: inline-block;
-	background: #eee;
-	border: 0;
-	color: #666;
-	border-right: 1px solid #ddd;
+	background: #fff;
+	color: #555;
 	position: relative;
 	bottom: 0;
 	outline: 0;
 	transition: 0.2s;
+	margin: 10px;
 }
 .react > input[type=submit]{
 	background: #eee;
@@ -309,12 +310,27 @@ header {
 }
 
 .UreactButton{
-	width: 450px;
+	width: 100px;
 }
 .reactButton:hover {
-	background: #e0e0e0;
-	transition: 0.2s;
-	color: #03f;
+	background-color: #555;
+	color: #fff;
+	border: 0;
+}
+
+._thumbsup:hover {
+	background-color: #03f;
+}
+
+._heart:hover {
+	background-color: #f03;
+}
+
+._comments:hover {
+	background-color: #555;
+}
+._post:hover {
+	background-color: #590;
 }
 footer {
 	width: 100%;
@@ -393,7 +409,9 @@ footer {
 	line-height: 1;
 	color: #777;
 }
-
+.loginInput{
+	margin: 11px;
+}
 #adminlogin{
 	width: 300px;
 	height: 400px;

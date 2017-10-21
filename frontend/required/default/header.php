@@ -37,11 +37,13 @@
 </head>
 <body>
 	<header>
+		<div id="site-title">
 		<?php if ($site['iflogo'] == 1){ ?>
-			<img id="site-title" style="padding: 0;" src="<?php echo IMAGE_DIR . $site['site-name']; ?>"></img>
+			<img style="padding: 0;" src="<?php echo IMAGE_DIR . $site['site-name']; ?>"></img>
 		<?php }else{ ?>
-			<span id="site-title"><h1><?php echo $site['site-name']; ?></h1></span>
+			<span ><h1><?php echo $site['site-name']; ?></h1></span>
 		<?php } ?>
+		</div>
 		<div id="search">
 			<input type="text" placeholder="Search" id="searchInput"></input>
 		</div>
@@ -51,7 +53,7 @@
 				<span class="headerText">Theodore Boudros</span>
 			</div>
 			<button class="headerButton" data-toggle="tooltip" title="Logout" data-original-title="Logout">
-				<span class="headerText">Logout</span><i class="fa fa-arrow-circle-right"></i>
+				<i class="fa fa-bars"></i>
 			</button>
 		</div>
 	</header>

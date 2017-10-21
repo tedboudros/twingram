@@ -8,13 +8,13 @@
             <?php
     if(isset($_POST['submit'])){
         $login = loginAdmin($_POST['username'], $_POST['password']);
-        if($login == 0){
+        if($login == 0){   
             unset($login);
             ?>
                   <tr><td><center><h5>The username or the password is wrong!</h5></center></td></tr>
              <?php
         }else{
-            $_SESSION = array_merge($_SESSION, $login);
+            $_SESSION['admin'] = $login;
             header("location: /admin");
         }
     }

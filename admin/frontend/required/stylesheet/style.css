@@ -85,7 +85,7 @@ header {
 	height: 60px;
 	background-color: #fff;
 	border-bottom: 1px solid #ddd;
-	display: block;
+	display: inline-block;
 	box-shadow: 0 0px 6px #ddd;
 	position: fixed;
 	top: 0;
@@ -97,12 +97,16 @@ header {
 	color: #655dff;
 	display: inline-block;
 	margin: 0;
-	padding-top: 15px;
-	padding-left: 15px;
-	height: 60px;
-	width: 180px;
+	height: 59px;
 	border-right: 1px solid #ddd;
 	cursor: pointer;
+	background-color: #fff;
+	max-width: 200px;
+}
+#site-title > img{
+	background-size: contain;
+	height: 50px;
+	margin: 5px 15px;
 }
 
 #site-title h1{
@@ -405,10 +409,11 @@ hr {
 	background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
   }
   #sidebar {
-	  width: 180px;
+	  width: 250px;
 	  height: calc(100% - 60px);
 	  border-right: 1px solid #ddd;
 	  background-color: #fff;
+	  position: fixed;
 	  box-shadow: 0 6px 0px #ddd;
   }
   .sidebarItem {
@@ -417,7 +422,7 @@ hr {
 	padding: 10px;
 	font-size: 17px;
 	font-weight: 200;
-	width: 181px;
+	width: 250px;
 	display: block;
 	margin: 0;
 	color: #333;
@@ -428,7 +433,7 @@ hr {
 	color: #111;
   }
   #admincontainer{
-	  width: calc(100% - 180px);
+	  width: calc(100% - 250px);
 	  display: flex;
 	  flex-wrap: wrap;
 	  line-height: normal;
@@ -437,7 +442,7 @@ hr {
 	  align-content: center;
 	  position: absolute;
 	  top: 60px;
-	  left: 180px;
+	  left: 250px;
 	  margin: 0;
 	  min-height: calc(100% - 60px);
   }
@@ -468,14 +473,13 @@ hr {
 	padding: 10px;
 }
 .admintable{
-	border: 1px solid #ddd;
-    box-shadow: 0 0px 6px #ccc;
+	border: 1px solid #555;
+    box-shadow: 0 0px 6px #555;
 	border-radius: 3px;
 	margin: 20px;
 	text-align: center;
 }
 .admintable td{
-	
 	padding: 10px;
 	max-width: 300px;
 	height: 60px;
@@ -487,11 +491,11 @@ hr {
 .admintable th {
 	margin: 5px;
 	padding: 20px;
-	background-color: #fff;
-	color: #444;
-	font-weight: 200;
-	border-bottom: 1px solid #ccc;
+	background-color: #444;
+	color: #fff;
+	font-weight: 100;
+	border-bottom: 3px solid #555;
 }
-.admintable tr:nth-child(even) {background: #fff; color: #666;}
-.admintable tbody:hover > tr:nth-child(odd) {background: #fff; color: #666;}
+.admintable tr:nth-child(even) {background: #444; color: #fff;}
+.admintable tbody:hover > tr:nth-child(odd) {background: #444; color: #fff;}
 .admintable tr:nth-child(odd) {background: #0077ff; color: #fff;}

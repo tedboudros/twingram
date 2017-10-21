@@ -7,9 +7,9 @@
 				<button class="reactButton UreactButton" data-toggle="tooltip" title="Love" onclick="" data-original-title="Love">
 					<i class="fa fa-user"></i>
 				</button>
-				<input type="submit" style="border-right: 0;" class="reactButton UreactButton" value="Post" data-toggle="tooltip" title="Post" data-original-title="Post">
-					<i class="fa fa-download"></i>
-				</input>
-			</div>
+				<button type="submit" style="border-right: 0;" class="reactButton UreactButton _post" value="Post" data-toggle="tooltip" title="Post" data-original-title="Post">
+					<i class="fa fa-check-circle"></i>
+				</button>
+	</div>
 </div>
 </form>

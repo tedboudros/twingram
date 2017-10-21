@@ -5,42 +5,37 @@
 	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/javascript.js"></script>
 	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/tracking.js"></script>
 	<title><?php echo $site['site-title']; ?></title>
-	<script>
-		$(document).ready(function () {
-			$(".headerButton[title=Logout]").click(function () { //To logout
-				$.ajax({
-						type: "POST",
-						url: "<?php echo ENGINE_DIR; ?>destroysession.php"
-					})
-					.done(function (msg) {
-						var string = window.location.href;
-						window.location.replace("/admin");
-					});
-			});
-		});
-	</script>
 </head>
 <body>
 	<header>
-	<div id="site-title">
+		<div id="site-title">
 		<?php if ($site['iflogo'] == 1){ ?>
 			<img style="padding: 0;" src="<?php echo IMAGE_DIR . $site['site-name']; ?>"></img>
 		<?php }else{ ?>
 			<span ><h1><?php echo $site['site-name']; ?></h1></span>
 		<?php } ?>
 		</div>
-		<?php if(isset($_SESSION['admin']['displayName'])){ ?>
+
 		<div id="headerRight">
-			<div class="headerButton">
-				<img class="userPhoto" src="<?php echo IMAGE_DIR . "profile.png"; ?>"></img>
-				<span class="headerText"><?php echo $_SESSION['admin']['displayName']; ?></span>
-			</div>
-			<button class="headerButton" data-toggle="tooltip" title="Logout" data-original-title="Logout">
-				<span class="headerText">Logout</span><i class="fa fa-arrow-circle-right"></i>
-			</button>
+			<form action="" method="POST">
+				<input type="text" placeholder="Username" name="username" class="loginInput"></input>
+				<input type="password" placeholder="Password" name="password" class="loginInput"></input>
+				<input type="submit" value="Login" name="submit" class="loginInput"></input>
+			</form>
 		</div>
-		<?php } ?> 
 	</header>
 	<div id="content">
 	<div id="contentspace"></div>
-	
+
+	<?php if(isset($_POST['submit'])){
+        $login = loginUser($_POST['username'], $_POST['password']);
+        if($login == 0){   
+            unset($login);
+            ?>
+                  <tr><td><center><h5>The username or the password is wrong!</h5></center></td></tr>
+             <?php
+        }else{
+            $_SESSION = array_merge($_SESSION, $login);
+            header("location: /");
+        }
+    }

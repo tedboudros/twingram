@@ -31,6 +31,16 @@ function loginAdmin($username, $password){
 	return 0;	
 }
 
+function loginUser($username, $password){
+	$query = db_query('SELECT * FROM `users` WHERE username = "' . $username . '"');
+	while ($row = mysqli_fetch_assoc($query)) { 
+		if(password_verify($password, $row['passhash'])){
+			return $row;
+		}
+	}
+	return 0;	
+}
+
 	function getUserFromID($id){
 		$query = db_query('SELECT * FROM `users` WHERE id = ' . $id);
     while ($row = mysqli_fetch_assoc($query)) { 
