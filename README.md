@@ -2,12 +2,14 @@
 
 <b>Installation:</b>
 
--Install all the files on your default web dir (htdocs, etc).
+<li>
+<ul>Install all the files on your default web dir (htdocs, etc).</ul>
 
--Create a new database.
+<ul>Create a new database.</ul>
 
--Go on the file "engine/db/config.php" and make the right changes for your database.
+<ul>Go on the file "engine/db/config.php" and make the right changes for your database.</ul>
 
--Run the "installer/index.php" file to install!.
+<ul>Run the "installer/index.php" file to install!.</ul>
 
--Delete the installer folder.
+<ul>Delete the installer folder.</ul>
+</li>
