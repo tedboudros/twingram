@@ -1,19 +1,10 @@
 <?php
-
+include_once "../engine/db/config.php";
 // Name of the file
 $filename = 'sm.sql';
-// MySQL host
-$db_host = 'localhost';
-// MySQL username
-$db_username = 'root';
-// MySQL password
-$db_password = '';
-// Database name
-$db_database = 'sm';
-// MySQL port
-$db_port = 3306;
+
 // Connect to MySQL server
-$connection = new mysqli($db_host, $db_username, $db_password, $db_database, $db_port);
+$connection = new mysqli(db_host, db_username, db_password, db_database, db_port);
 if(mysqli_errno($connection)){
     echo mysqli_error($connection);
 }
