@@ -50,7 +50,7 @@
 		</div>
 		<div id="headerRight">
 			<div class="headerButton">
-				<img class="userPhoto" src="<?php echo IMAGE_DIR . "profile.png"; ?>"></img>
+				<img class="userPhoto" src="<?php echo IMAGE_DIR . $_SESSION['image']; ?>"></img>
 				<span class="headerText"><?php echo $_SESSION['displayname']; ?></span>
 			</div>
 			<button class="headerButton" data-toggle="tooltip" title="Logout" data-original-title="Logout">
