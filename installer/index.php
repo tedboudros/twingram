@@ -1,7 +1,7 @@
 <?php
 include_once "../engine/db/config.php";
 // Name of the file
-$filename = 'sm.sql';
+$filename = 'twingram.sql';
 
 // Connect to MySQL server
 $connection = new mysqli(db_host, db_username, db_password, db_database, db_port);

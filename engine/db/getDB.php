@@ -41,6 +41,27 @@ function loginUser($username, $password){
 	return 0;	
 }
 
+function registerUser($email, $password, $repassword, $username){
+	$return = "<ul>";
+	if($email == ""){
+		$return = $return . "<li>Email is incorrect</li>";
+	}
+	if($username == ""){
+		$return = $return . "<li>Username is incorrect</li>";
+	}
+	if($password == ""){
+		$return = $return . "<li>Password is incorrect</li>";
+	}else if($password == $repassword){
+		$hash = password_hash($password, PASSWORD_BCRYPT);
+		$query = db_query("INSERT INTO `users` (`id`, `username`, `passhash`, `displayname`, `image`, `bigimage`, `date`) VALUES (NULL, '$email', '$hash', '$username', 'profile.png', 'profile.png', CURRENT_TIMESTAMP)") or die(mysqli_error($connection));
+		$return = $return . "<li>Registered succesfully</li>";
+	}else{
+		$return = $return . "<li>Passwords don't match.</li>";
+	}
+	$return = $return . "</ul>";
+	return $return;
+}
+
 	function getUserFromID($id){
 		$query = db_query('SELECT * FROM `users` WHERE id = ' . $id);
     while ($row = mysqli_fetch_assoc($query)) { 
@@ -60,7 +81,7 @@ function loginUser($username, $password){
 	// New post
 
 	if(isset($_POST['postText']) && $_POST['postText'] != "" && $_POST['postTitle'] != ""){
-		$query = db_query('INSERT INTO `posts` (`id`, `userid`, `title`, `text`, `date`) VALUES (NULL, "1", "' . $_POST['postTitle'] . '", "' . $_POST['postText'] . '", CURRENT_TIMESTAMP)');
+		$query = db_query('INSERT INTO `posts` (`id`, `userid`, `title`, `text`, `date`) VALUES (NULL, "' . $_SESSION['id'] .  '", "' . $_POST['postTitle'] . '", "' . $_POST['postText'] . '", CURRENT_TIMESTAMP)');
 		header("location: /");
 	}
 

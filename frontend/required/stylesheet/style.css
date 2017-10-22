@@ -18,7 +18,8 @@ body {
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Cabin', sans-serif;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -255,6 +256,7 @@ header {
 	padding: 0 40px;
 	max-width: 100%;
 	border: 0;
+	font-size: 14px;
 	background: transparent;
 	display: block;
 }
@@ -532,3 +534,40 @@ hr {
 .admintable tr:nth-child(even) {background: #fff; color: #666;}
 .admintable tbody:hover > tr:nth-child(odd) {background: #fff; color: #666;}
 .admintable tr:nth-child(odd) {background: #0077ff; color: #fff;}
+
+#footer_info{
+	margin: 0 auto;
+	display: block;
+	max-width: 900px;
+	height: 120px;
+	border-bottom: 1px solid #aaa;
+}
+#footer_copyright{
+	margin: 0 auto;
+	display: block;
+	max-width: 900px;
+	height: 79px;
+	padding-top: 20px;
+	font-size: 14px;
+}
+#register{
+	width: 350px;
+	margin: 0 auto;
+	margin-top: 100px;
+	height: 500px;
+	background-color: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 5px 10px -2px #888;
+}
+#register input{
+	display: block;
+	margin-top: 15px;
+	width: 270px;
+}
+#register form {
+	padding-top: 15px;
+	width: 270px;
+	margin: auto;
+	display: block;	
+}
