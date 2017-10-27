@@ -81,7 +81,8 @@ function registerUser($email, $password, $repassword, $username){
 	// New post
 
 	if(isset($_POST['postText']) && $_POST['postText'] != "" && $_POST['postTitle'] != ""){
-		$query = db_query('INSERT INTO `posts` (`id`, `userid`, `title`, `text`, `date`) VALUES (NULL, "' . $_SESSION['id'] .  '", "' . $_POST['postTitle'] . '", "' . $_POST['postText'] . '", CURRENT_TIMESTAMP)');
+		$postText = prepareStringforPost($_POST['postText']);
+		$query = db_query('INSERT INTO `posts` (`id`, `userid`, `title`, `text`, `date`) VALUES (NULL, "' . $_SESSION['id'] .  '", "' . $_POST['postTitle'] . '", "' . $postText . '", CURRENT_TIMESTAMP)');
 		header("location: /");
 	}
 

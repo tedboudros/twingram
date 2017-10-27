@@ -19,7 +19,7 @@ function showCommentsOnPost(element){
 			<img src="<?php echo IMAGE_DIR . getUserFromID($post['userid'])['image']; ?>" class="postOwnerPhoto"></img>
 			<span class="postOwner" ><h3><?php echo getUserFromID($post['userid'])['displayname'];?></h3></span>
 			<span class="postTitle" ><h4><?php echo $post['title'];?></h4></span>
-			<p class="postText" ><?php echo htmlspecialchars($post['text']);?></p>
+			<p class="postText" ><?php echo $post['text'];?></p>
 			<div class="comments">
 				<?php foreach(getComments($post['id']) as $comment) { ?>
 							<?php echo $comment['text']; ?>

@@ -58,6 +58,5 @@
 			</button>
 		</div>
 	</header>
+	<div id="container">
 	<div id="content">
-	<div id="contentspace"></div>
-	
