@@ -38,7 +38,7 @@
 <body>
 
 	<nav class="fixed-top">
-		<a id="title" class="navbar-brand" style="padding: 0; background-image: url(<?php echo IMAGE_DIR . $site['site-name']; ?>);"></a>
+		<a id="title" class="navbar-brand" style="padding: 0; background-image: url(<?php echo IMAGE_DIR . $site['site-image']; ?>);"></a>
 		<input type="text" placeholder="Search" id="search"></input>
 		<div id="headerRight" class="pull-right d-inline-block">
 			<div class="headerButton">

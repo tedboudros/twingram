@@ -14,7 +14,7 @@
 <body>
 
 	<nav class="fixed-top">
-		<a id="title" class="navbar-brand" style="padding: 0; background-image: url(<?php echo IMAGE_DIR . $site['site-name']; ?>);"></a>
+		<a id="title" class="navbar-brand" style="padding: 0; background-image: url(<?php echo IMAGE_DIR . $site['site-image']; ?>);"></a>
 		<div id="headerRight" style="margin: 9px;" class="pull-right d-inline-block">
 			<form action="" method="POST">
 				<input type="text" placeholder="Username" name="username" class="loginInput"></input>
