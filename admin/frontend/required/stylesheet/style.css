@@ -1,384 +1,3 @@
-html{
-    height: 100%;
-    width: 100%;
-    margin: 0; }
-body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    color: #666;
-    font-size: 12px;
-	line-height: 20px;
-	top: 0;
-	position: absolute;
-	background-color: #f7f7f7;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-	transition: 0.2s;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
-}
-
-input[type=submit]{
-	padding: 10px;
-	background-color: #03f;
-	color: #fff;
-	border: 0;
-	border-radius: 3px;
-}
-
-input[type=text], input[type=password]{
-	padding: 10px;
-	background-color: #eee;
-	color: #000;
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	min-width: 270px;
-	outline: none;
-}
-
-input[type=text], input[type=password]{
-	padding: 10px;
-	background-color: #eee;
-	color: #000;
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	min-width: 270px;
-	outline: none;
-	transition: 0.2s;
-}
-
-input[type=text]:hover, input[type=password]:hover{
-	border: 1px solid #aaa;
-}
-
-input[type=text]:focus, input[type=password]:focus{
-	border: 1px solid #03f;
-}
-
-a{
-	color: #03f;
-	text-rendering: optimizeLegibility;
-	font-size: 14px;
-	margin: 0 15px;
-}
-a:hover {
-	color: #00f;
-	cursor: pointer;
-}
-.fa {
-    font-size: 14px;
-}
-
-header {
-	width: 100%;
-	height: 60px;
-	background-color: #fff;
-	border-bottom: 1px solid #ddd;
-	display: inline-block;
-	box-shadow: 0 0px 6px #ddd;
-	position: fixed;
-	top: 0;
-	z-index: 9999;
-}
-
-#site-title {
-	font-size: 14px;
-	color: #655dff;
-	display: inline-block;
-	margin: 0;
-	height: 59px;
-	border-right: 1px solid #ddd;
-	cursor: pointer;
-	background-color: #fff;
-	max-width: 200px;
-}
-#site-title > img{
-	background-size: contain;
-	height: 50px;
-	margin: 5px 15px;
-}
-
-#site-title h1{
-	margin: 0;
-	font-weight: 200;
-	font-size: 30px;
-	letter-spacing: 1.3;
-	/* text-shadow: 0 0 1px #bbb; */
-	padding-right: 20px;
-}
-
-#headerRight {
-	float: right;
-	height: 50px;
-	display: inline-block;
-}
-.headerButton {
-	min-width: 120px;
-	height: 60px;
-	margin: 0;
-	float: left;
-	padding: 0;
-	display: inline-block;
-	background: #fff;
-	border: 0;
-	color: #666;
-	border-left: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	position: relative;
-	bottom: 0;
-	outline: 0;
-}
-.headerButton:hover {
-	background: #f0f0f0;
-	transition: 0.2s;
-	color: #000;
-}
-.headerText {
-	font-weight: 300;
-	font-size: 15px;
-	padding: 0 5px;
-	margin: 0 5px;
-	display: inline-block;
-
-}
-.post {
-	width: 902px;
-	min-height: 200px;
-	display: block;
-	margin: 30 auto;
-	background-color: #fff;
-	border-radius: 3px;
-	border: 1px solid #e0e0e0;
-	box-shadow: outset 0 0 20px -10px black;
-}
-
-.Upost {
-	color: #0077ff;
-	margin-top: 100px;
-}
-.UpostText {
-	display: block;
-	width: 860px;
-	height: 160px;
-	max-width: 860px;
-	margin: 20px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background-color: #fcfcfc;
-	max-height: 160px;
-	outline: 0px;
-	resize: none;
-	padding: 10px;
-}
-.UpostText:hover  {
-	transition: 0.2s;
-	border: 1px solid #aaa;
-}
-.UpostText:focus {
-	transition: 0.2s;
-	border: 1px solid #03f;
-}
-.postTitle {
-	padding: 20px;
-	padding-top: 2px;
-	display: block;
-    font-size: 1.5em;
-    font-weight: 300;
-	color: #333;
-	text-align: center;
-}
-.UpostTitle {
-	color: #666;
-	text-align: center;
-	width: 100%;
-}
-.UpostTitle h2 {
-	font-weight: lighter;
-}
-.postOwner {
-	padding: 20px;
-	padding-left: 10px;
-	padding-bottom: 0;
-	display: inline-block;
-    font-size: 1.5em;
-    font-weight: 300;
-	color: #333;
-	text-align: left;
-}
-.postOwnerPhoto {
-	margin: 20px 0px 30px 20px;
-	width: 60px;
-	height: 60px;
-	display: inline-block;
-	border-radius: 60px;
-    position: relative;
-    vertical-align: middle
-}
-
-.userPhoto {
-	width: 45px;
-	height: 45px;
-	display: inline-block;
-	border-radius: 45px;
-	margin: 7.5px;
-	margin-bottom: 11px;
-    position: relative;
-    vertical-align: middle;
-}
-.postText {
-	padding: 0 40px;
-	max-width: 100%;
-	border: 0;
-	background: transparent;
-	display: block;
-}
-.comments {
-	width: 900px;
-	left: 0;
-	height: 0px;
-	margin-top: 30px;
-	position: relative;
-    background-color: #f4f4f4;
-    overflow: hidden;
-	border: 0;
-	padding: 0;
-	border-top: 1px solid #ddd;
-}
-.react {
-	width: 900px;
-	left: 0;
-	height: 40px;
-	display: block;
-	position: relative;
-    background-color: #eee;
-    overflow: hidden;
-	border: 0;
-	padding: 0;
-	border-top: 1px solid #ddd;
-}
-.reactButton{
-	width: 300px;
-	height: 40px;
-	margin: 0;
-	float: left;
-	padding: 0;
-	display: inline-block;
-	background: #eee;
-	border: 0;
-	color: #666;
-	border-right: 1px solid #ddd;
-	position: relative;
-	bottom: 0;
-	outline: 0;
-}
-.react > input[type=submit]{
-	background: #eee;
-	color: #666;
-}
-
-.react > input[type=submit]:hover {
-	background: #e0e0e0;
-	transition: 0.2s;
-	color: #000;
-}
-
-.UreactButton{
-	width: 450px;
-}
-.reactButton:hover {
-	background: #e0e0e0;
-	transition: 0.2s;
-	color: #000;
-}
-footer {
-	width: 100%;
-	height: 200px;
-	background-color: #fff;
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	border-top: 1px solid #ddd;
-	box-shadow: 0 0px 6px #ddd;
-}
-#socialmedia {
-	width: 254px;
-	height: 60px;
-	margin: auto;
-	margin-top: 120px;
-	display: block;
-	color: #fff;
-	background-color: #fff;
-	border-radius: 50px;
-	border: 1px solid #bbb;
-}
-
-.buttonLink {
-	width: 40px;
-	height: 40px;
-	font-size: 20px;
-	text-align: center;
-	display: inline-block;
-	margin: 10px;
-	background-color: #fff;
-	border: 1px solid #fff;
-	border-radius: 50%;
-	color: #03f;
-	transition: 0.3s;
-}
-.buttonLink:hover {
-	background-color: #777;
-	color: #fff;
-}
-.buttonLink i {
-	font-size: 20px;
-	line-height: 2;
-}
-
-#content {
-	width: 100%;
-	height: 100%;
-	display: block;
-	position: relative;
-}
-#contentspace{
-	height: 60px;
-}
-#error404 {
-	padding: 40px 90px;
-	margin-top: 40px;
-	border-radius: 500px;
-	background-color: #333;
-    color: #e0dfdc;
-    font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
-    font-size: 60px !important;
-    text-align: center;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
-    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2a2a2a, 0 3px 0 #262626, 0 4px 0 #222, 0 5px 0 #1e1e1e, 0 6px 0 #1a1a1a, 0 7px 0 #161616, 0 8px 0 #121212, 0 22px 30px #000000;
-    letter-spacing: 0.1em;
-    line-height: 50px !important;
-    overflow: hidden;
-}
-
-#error404small {
-	margin-top: 40px;
-	font-size: 30px;
-	line-height: 1;
-	color: #777;
-}
-
 #adminlogin{
 	width: 300px;
 	height: 400px;
@@ -409,12 +28,13 @@ hr {
 	background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
   }
   #sidebar {
-	  width: 250px;
-	  height: calc(100% - 60px);
-	  border-right: 1px solid #ddd;
-	  background-color: #fff;
-	  position: fixed;
-	  box-shadow: 0 6px 0px #ddd;
+	bottom: 0;
+	border-top: 1px solid #ddd;
+	background-color: #fff;
+	position: absolute;
+	box-shadow: 0 6px 0px #ddd;
+	padding: 0;
+	width: 100%;
   }
   .sidebarItem {
 	border-bottom: 1px solid #ddd;
@@ -422,7 +42,6 @@ hr {
 	padding: 10px;
 	font-size: 17px;
 	font-weight: 200;
-	width: 250px;
 	display: block;
 	margin: 0;
 	color: #333;
@@ -432,20 +51,14 @@ hr {
 	background-color: #ddd;
 	color: #111;
   }
-  #admincontainer{
-	  width: calc(100% - 250px);
+  #dashboardcontainer{
 	  display: flex;
 	  flex-wrap: wrap;
 	  line-height: normal;
 	  flex-direction: row;
 	  justify-content: center;
 	  align-content: center;
-	  position: absolute;
-	  top: 60px;
-	  left: 250px;
-	  margin: 0;
-	  min-height: calc(100% - 60px);
-  }
+}
   .dashboardItem{
 	  width: 250px;
 	  height: 200px;
@@ -473,29 +86,16 @@ hr {
 	padding: 10px;
 }
 .admintable{
-	border: 1px solid #555;
-    box-shadow: 0 0px 6px #555;
+    box-shadow: 0 0px 6px #ccc;
 	border-radius: 3px;
-	margin: 20px;
 	text-align: center;
+	
 }
 .admintable td{
 	padding: 10px;
 	max-width: 300px;
 	height: 60px;
 }
-.admintable tr:hover > td{
-	background: #0077ff;
-	color: #fff;
+.settingsrow{
+	margin: 40px 0;
 }
-.admintable th {
-	margin: 5px;
-	padding: 20px;
-	background-color: #444;
-	color: #fff;
-	font-weight: 100;
-	border-bottom: 3px solid #555;
-}
-.admintable tr:nth-child(even) {background: #444; color: #fff;}
-.admintable tbody:hover > tr:nth-child(odd) {background: #444; color: #fff;}
-.admintable tr:nth-child(odd) {background: #0077ff; color: #fff;}

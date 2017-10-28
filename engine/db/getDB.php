@@ -3,6 +3,16 @@
 $db = array();
 $site = array();
 
+if(isset($_POST['setting_submit'])){ //If settings changed
+	changeSetting("site-name", $_POST['site-name']);
+	changeSetting("site-image", $_POST['site-image']);
+}
+
+
+function changeSetting($setting, $value){
+	$query = db_query("UPDATE `settings` SET `value` = '$value' WHERE `settings`.`setting` = '$setting'");
+}
+
 function dashboard(){
 	$values = [];
 	$query = db_query('SELECT * FROM `posts` WHERE id=(SELECT max(id) FROM `posts`)');
