@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 22 Οκτ 2017 στις 15:04:56
+-- Χρόνος δημιουργίας: 28 Οκτ 2017 στις 15:23:44
 -- Έκδοση διακομιστή: 10.1.28-MariaDB
 -- Έκδοση PHP: 7.1.10
 
@@ -30,18 +30,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `displayName` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `displayname` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `username` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `passwordhash` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `image` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Άδειασμα δεδομένων του πίνακα `admin`
 --
 
-INSERT INTO `admin` (`id`, `displayName`, `username`, `passwordhash`, `date`) VALUES
-(1, 'Theodore Boudros', 'admin', '$2y$10$maSiS7hgTPTiNccSw0RSAuCenQlTIXR71cuoiQYgZxo0OQe4FRHK6', '2017-08-26 04:44:17');
+INSERT INTO `admin` (`id`, `displayname`, `username`, `passwordhash`, `date`, `image`) VALUES
+(1, 'Theodore Boudros', 'admin', '$2y$10$maSiS7hgTPTiNccSw0RSAuCenQlTIXR71cuoiQYgZxo0OQe4FRHK6', '2017-08-26 04:44:17', 'profile.png');
 
 -- --------------------------------------------------------
 
@@ -56,6 +57,10 @@ CREATE TABLE `comments` (
   `userid` int(11) NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `comments`
+--
 
 -- --------------------------------------------------------
 
@@ -75,7 +80,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `pageName`, `pages`, `date`) VALUES
-(1, 'homepage', '[\"header.php\",\"post.php\",\"posts.php\"]', '2017-08-22 03:49:07'),
+(1, 'homepage', '[\"header.php\",\"post.php\",\"posts.php\",\"footer.php\"]', '2017-08-22 03:49:07'),
 (2, '404', '[\"header.php\",\"404.php\",\"footer.php\"]', '2017-08-22 03:49:27'),
 (3, 'profile', '[\"header.php\",\"footer.php\"]', '2017-08-22 03:49:42'),
 (4, 'login', '[\"headerLogin.php\",\"register.php\",\"footer.php\"]', '2017-09-22 22:21:21');
@@ -94,9 +99,10 @@ CREATE TABLE `posts` (
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
 --
+-- Άδειασμα δεδομένων του πίνακα `posts`
+--
+
 -- Δομή πίνακα για τον πίνακα `settings`
 --
 
@@ -112,9 +118,8 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `setting`, `value`, `date`) VALUES
-(1, 'site-name', 'logo.png', '2017-08-20 18:29:20'),
-(2, 'site-title', 'Title here', '2017-08-21 18:06:09'),
-(3, 'iflogo', '1', '2017-08-22 00:04:14');
+(1, 'site-name', 'TwinGram', '2017-08-20 18:29:20'),
+(2, 'site-image', 'logo.png', '2017-10-28 15:46:02');
 
 -- --------------------------------------------------------
 
@@ -131,6 +136,13 @@ CREATE TABLE `users` (
   `bigimage` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `passhash`, `displayname`, `image`, `bigimage`, `date`) VALUES
+(1, 'th', '$2y$10$crMeXGYWmepXaOUCijKR1.XtAUbo/ieiVT95OLsxJqRV2jpT7o9SW', 'th', 'profile.png', 'profile.png', '2017-10-22 16:25:46');
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
@@ -198,20 +210,20 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT για πίνακα `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT για πίνακα `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT για πίνακα `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
