@@ -27,30 +27,6 @@ hr {
 	background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 	background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
   }
-  #sidebar {
-	bottom: 0;
-	border-top: 1px solid #ddd;
-	background-color: #fff;
-	position: absolute;
-	box-shadow: 0 6px 0px #ddd;
-	padding: 0;
-	width: 100%;
-  }
-  .sidebarItem {
-	border-bottom: 1px solid #ddd;
-	cursor: pointer;
-	padding: 10px;
-	font-size: 17px;
-	font-weight: 200;
-	display: block;
-	margin: 0;
-	color: #333;
-	text-decoration: none;
-  }
-  .sidebarItem:hover {
-	background-color: #ddd;
-	color: #111;
-  }
   #dashboardcontainer{
 	  display: flex;
 	  flex-wrap: wrap;
@@ -89,7 +65,8 @@ hr {
     box-shadow: 0 0px 6px #ccc;
 	border-radius: 3px;
 	text-align: center;
-	
+	max-width: 90%;
+    margin-left: 5%;
 }
 .admintable td{
 	padding: 10px;
@@ -98,4 +75,46 @@ hr {
 }
 .settingsrow{
 	margin: 40px 0;
+}
+#menu {
+	width: 80px;
+	height: calc(100% - 60px);
+	position: fixed;
+	top: 60px;
+	left: 0;
+	border-right: 1px solid #aaa;
+    box-shadow: 0 0px 6px #aaa;
+	background: #fff;
+	display: block;
+}
+.menuItem {
+	height: 50px;
+	width: 50px;
+	border: 0;
+	background-color: #0077ff;
+	border-radius: 25px;
+	margin: 15px;
+	color: #fff;
+	box-shadow: inset 0 0 10px 0px #666;
+	display: flex;
+	align-items: center;
+	transition: 0.2s;
+}
+.menuItem:hover {
+	background: #fff;
+	color: #0077ff;
+	transition: 0.2s;
+	text-decoration: none;
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+}
+.menuItem i {
+	text-align: center;
+	font-size: 20px;
+	display: block;
+	margin: 0 auto;
+}
+#setting_submit {
+	min-width: 270px;
 }

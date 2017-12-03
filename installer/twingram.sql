@@ -41,9 +41,6 @@ CREATE TABLE `admin` (
 -- Άδειασμα δεδομένων του πίνακα `admin`
 --
 
-INSERT INTO `admin` (`id`, `displayname`, `username`, `passwordhash`, `date`, `image`) VALUES
-(1, 'Theodore Boudros', 'admin', '$2y$10$maSiS7hgTPTiNccSw0RSAuCenQlTIXR71cuoiQYgZxo0OQe4FRHK6', '2017-08-26 04:44:17', 'profile.png');
-
 -- --------------------------------------------------------
 
 --
@@ -137,16 +134,6 @@ CREATE TABLE `users` (
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Άδειασμα δεδομένων του πίνακα `users`
---
-
-INSERT INTO `users` (`id`, `username`, `passhash`, `displayname`, `image`, `bigimage`, `date`) VALUES
-(1, 'th', '$2y$10$crMeXGYWmepXaOUCijKR1.XtAUbo/ieiVT95OLsxJqRV2jpT7o9SW', 'th', 'profile.png', 'profile.png', '2017-10-22 16:25:46');
-
---
--- Ευρετήρια για άχρηστους πίνακες
---
 
 --
 -- Ευρετήρια για πίνακα `admin`

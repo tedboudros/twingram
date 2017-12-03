@@ -1,14 +1,14 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Cabin|Dosis|Roboto" rel="stylesheet">
-	<link href="<?php echo FRONTEND_DIR; ?>required/stylesheet/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo FRONTEND_DIR; ?>required/stylesheet/style.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo FRONTEND_DIR; ?>required/scripts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/jquery.js"></script>
-	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/javascript.js"></script>
-	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/tracking.js"></script>
-	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/popper.js"></script>
-	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/popper-utils.js"></script>
-	<script src="<?php echo FRONTEND_DIR; ?>required/scripts/bootstrap.min.js"></script>
+	<link href="<?php echo HTTP_FRONTEND; ?>required/stylesheet/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo HTTP_FRONTEND; ?>required/stylesheet/style.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo HTTP_FRONTEND; ?>required/scripts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<script src="<?php echo HTTP_FRONTEND; ?>required/scripts/jquery.js"></script>
+	<script src="<?php echo HTTP_FRONTEND; ?>required/scripts/javascript.js"></script>
+	<script src="<?php echo HTTP_FRONTEND; ?>required/scripts/tracking.js"></script>
+	<script src="<?php echo HTTP_FRONTEND; ?>required/scripts/popper.js"></script>
+	<script src="<?php echo HTTP_FRONTEND; ?>required/scripts/popper-utils.js"></script>
+	<script src="<?php echo HTTP_FRONTEND; ?>required/scripts/bootstrap.min.js"></script>
 	<title><?php echo $site['site-name']; ?></title>
 </head>
 <body>

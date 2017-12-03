@@ -1,13 +1,13 @@
 <?php
-if(isset($_SESSION['admin']['displayname'])){
-    include_once DEFAULT_THEME_DIR . "sidebar.php";
-}
 
+if(isset($_SESSION['admin']['displayname'])){
+	include_once ADMIN_DEFAULT_THEME_DIR . "menu.php";
+}
 
 if(isset($_GET['adminpath'])){
     
     if(isset($_SESSION['admin']['displayname'])){
-        include_once DEFAULT_THEME_DIR  . $_GET['adminpath'] . ".php"; 
+        include_once ADMIN_DEFAULT_THEME_DIR  . $_GET['adminpath'] . ".php"; 
     }else{
         header("location: /admin/");
     }
@@ -17,7 +17,7 @@ if(isset($_GET['adminpath'])){
     if(isset($_SESSION['admin']['displayname'])){
           header("location: /admin/index.php?adminpath=dashboard");
     }else{
-          include_once DEFAULT_THEME_DIR . "login.php";
+          include_once ADMIN_DEFAULT_THEME_DIR . "login.php";
     }
           
 }

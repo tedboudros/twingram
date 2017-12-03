@@ -13,7 +13,7 @@
     </div>
     <div class="row settingsrow">
         <div class="col" align="center">
-            <input type="submit" name="setting_submit" value="Save changes"></input>
+            <input id="setting_submit" type="submit" name="setting_submit" value="Save changes"></input>
         </div>
     </div>
 </form>
