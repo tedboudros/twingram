@@ -7,7 +7,7 @@
 
 <li>Create a new database.</li>
 
-<li>Run the "installer/index.php" file to install.</li>
+<li>Navigate to  "/installer/" to install.</li>
 
 <li>Delete the installer folder.</li>
 </ul>
