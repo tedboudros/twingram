@@ -1,8 +1,8 @@
 <?php
 /////////////////////////// WRITING THE CONFIG FILE
-$dir = rtrim(rtrim(__DIR__, "/writesql.php"),"installer\stages") . "/";
-$fp=fopen($dir . 'engine/db/config.php','w');
-$fs =  "<?php\n";
+$dir = str_replace("installer\stages","",__DIR__);
+$fp  = fopen($dir . 'engine/db/config.php','w');
+$fs  = "<?php\n";
 $fs .= "define('db_host', '" . $_POST['host'] . "');\n";
 $fs .= "define('db_username', '" . $_POST['username'] . "');\n";
 $fs .= "define('db_password', '" . $_POST['password'] . "');\n";

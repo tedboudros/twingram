@@ -1,9 +1,9 @@
 <?php
 /////////////////////////// WRITING THE CONFIG FILE
-$url = rtrim("http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'installer/') . "/";
-$dir = rtrim(rtrim(__DIR__, "/config.php"),"installer\stages") . "/";
-$fp=fopen($dir . 'config.php','w');
-$fs =  "<?php\n";
+$url = str_replace("installer/","","http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+$dir = str_replace("installer\stages","",__DIR__);
+$fp  = fopen($dir . 'config.php','w');
+$fs  = "<?php\n";
 $fs .= "define('ENGINE_DIR', '" . $dir . "engine/');\n";
 $fs .= "define('HTTP', '$url');\n";
 $fs .= "define('HTTP_FRONTEND', HTTP . 'frontend/');\n";
