@@ -1,10 +1,11 @@
 <?php
 /////////////////////////// WRITING THE CONFIG FILE
+$url = rtrim("http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 'installer/') . "/";
 $dir = rtrim(rtrim(__DIR__, "/config.php"),"installer\stages") . "/";
 $fp=fopen($dir . 'config.php','w');
 $fs =  "<?php\n";
 $fs .= "define('ENGINE_DIR', '" . $dir . "engine/');\n";
-$fs .= "define('HTTP', 'http://' . '" . $_SERVER['HTTP_HOST'] . "/');\n";
+$fs .= "define('HTTP', '$url');\n";
 $fs .= "define('HTTP_FRONTEND', HTTP . 'frontend/');\n";
 $fs .= "define('HTTP_FRONTEND_ADMIN', HTTP . 'admin/frontend/');\n";
 $fs .= "define('ADMIN_DIR', '" . $dir . "admin/');\n";
