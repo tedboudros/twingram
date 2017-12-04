@@ -16,15 +16,19 @@ function changeSetting($setting, $value){
 function dashboard(){
 	$values = [];
 	$query = db_query('SELECT * FROM `posts` WHERE id=(SELECT max(id) FROM `posts`)');
+	$values['posts'] = 0;
 	while ($row = mysqli_fetch_assoc($query)) { 
 			$values['posts'] = $row['id'];
 		}
 	$query = db_query('SELECT * FROM `users` WHERE id=(SELECT max(id) FROM `users`)');
+	$values['users'] = 0;
 	while ($row = mysqli_fetch_assoc($query)) { 
 			$values['users'] = $row['id'];
 		}
 	$query = db_query('SELECT * FROM `comments` WHERE id=(SELECT max(id) FROM `comments`)');
-	while ($row = mysqli_fetch_assoc($query)) { 
+	$values['comments'] = 0;
+	while ($row = mysqli_fetch_assoc($query)) {
+			 
 			$values['comments'] = $row['id'];
 		}
 		return $values;

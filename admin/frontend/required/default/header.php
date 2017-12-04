@@ -1,7 +1,6 @@
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Cabin|Dosis|Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin|Dosis|Roboto|Open+Sans" rel="stylesheet">
 	<link href="<?php echo HTTP_FRONTEND; ?>required/stylesheet/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo HTTP_FRONTEND; ?>required/stylesheet/style.css" rel="stylesheet" type="text/css" />
 	<link href="<?php echo HTTP_FRONTEND_ADMIN; ?>required/stylesheet/style.css" rel="stylesheet" type="text/css" />
 	<link href="<?php echo HTTP_FRONTEND; ?>required/scripts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<script src="<?php echo HTTP_FRONTEND; ?>required/scripts/jquery.js"></script>
@@ -23,7 +22,7 @@
 		});
 
 		$(document).ready(function () {
-			$(".headerButton[title=Logout]").click(function () { //To logout
+			$(".logoutBtn").click(function () { //To logout
 				$.ajax({
 						type: "POST",
 						url: "<?php echo HTTP_FRONTEND; ?>destroysession.php"
@@ -38,19 +37,18 @@
 </head>
 <body>
 
-<nav class="fixed-top">
+<nav>
 	<a id="title" class="navbar-brand" style="padding: 0; background-image: url(<?php echo IMAGE_DIR . $site['site-image']; ?>);"></a>
 	<?php if(isset($_SESSION['admin'])){ ?>
 	<div id="headerRight" class="pull-right d-inline-block">
-		<div class="headerButton">
-			<a class="userPhoto" style="background-image: url(<?php echo IMAGE_DIR . $_SESSION['admin']['image']; ?>);"></a>
-			<span class="align-middle headerText"><?php echo $_SESSION['admin']['displayname']; ?></span>
+		<div class="buttonsNav">
+			<span class="headerText"><i class="usericon fa fa-user"></i><?php echo $_SESSION['admin']['displayname']; ?></span>
+			<button class="logoutBtn" data-toggle="tooltip" title="Logout" data-original-title="Logout">
+				<i class="fa fa-sort-down"></i>
+			</button>
 		</div>
-		<button class="headerButton" data-toggle="tooltip" title="Logout" data-original-title="Logout">
-			<i class="fa fa-bars"></i>
-		</button>
 	</div>
 	<?php } ?>
 </nav>
 
-<div class="container mainContent content">
+<div class="mainContent content">

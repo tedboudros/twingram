@@ -19,6 +19,7 @@
 	margin: auto;
 	display: block;
 }
+
 hr { 
 	border: 0; 
 	height: 1px; 
@@ -59,7 +60,6 @@ hr {
 	font-size: 120px;
 	font-weight: 600;
 	margin: 0;
-	padding: 10px;
 }
 .admintable{
     box-shadow: 0 0px 6px #ccc;
@@ -78,36 +78,34 @@ hr {
 }
 #menu {
 	width: 80px;
-	height: calc(100% - 60px);
+	height: 100vh;
 	position: fixed;
-	top: 60px;
 	left: 0;
-	border-right: 1px solid #aaa;
-    box-shadow: 0 0px 6px #aaa;
-	background: #fff;
+	top: 0;
+	background: #0077ff;
 	display: block;
+	padding: 0;
+	-webkit-box-shadow: 0 0px 2px #777;
+	-moz-box-shadow: 0 0px 2px #777;
+	box-shadow: 0 0px 2px #777;
 }
 .menuItem {
-	height: 50px;
-	width: 50px;
-	border: 0;
+	height: 80px;
+	width: 80px;
 	background-color: #0077ff;
-	border-radius: 25px;
-	margin: 15px;
 	color: #fff;
-	box-shadow: inset 0 0 10px 0px #666;
 	display: flex;
 	align-items: center;
 	transition: 0.2s;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #006699;
 }
 .menuItem:hover {
 	background: #fff;
 	color: #0077ff;
 	transition: 0.2s;
 	text-decoration: none;
-	-ms-transform: rotate(360deg); /* IE 9 */
-    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
-    transform: rotate(360deg);
 }
 .menuItem i {
 	text-align: center;
@@ -115,6 +113,73 @@ hr {
 	display: block;
 	margin: 0 auto;
 }
+#logo {
+	height: 80px;
+	width: 80px;
+	background-color: #0077ff;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	transition: 0.2s;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #006699;
+}
+#logo img {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	display: block;
+}
 #setting_submit {
 	min-width: 270px;
+}
+nav {
+	position: absolute;
+	top: 20px;
+	left: 100px;
+	width: calc(100% - 120px);
+	background: #e6e6e6;
+	height: 100px;
+	border: 1px solid #ccc;
+}
+.mainContent{
+	position: absolute;
+	top: 140px;
+	left: 100px;
+	background: #e6e6e6;
+	width: calc(100% - 120px);
+	border: 1px solid #ccc;
+}
+.logoutBtn{
+	width: 30px;
+    height: 30px;
+    border: 0;
+	font-weight: 300;
+	font-size: 16px;
+	background: transparent;
+	display: block;
+}
+.logoutBtn i{
+	margin-top: -18px;
+	font-size: 16px;
+}
+.headerText {
+	height: 30px;
+    display: inline-block;
+    font-size: 20px;
+    border: 0;
+	font-weight: 300;
+}
+.headerText i {
+	font-size: 24px;
+}
+.usericon {
+	margin-right: 10px;
+}
+.buttonsNav{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 30px;
 }
