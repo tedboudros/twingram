@@ -109,7 +109,7 @@ $_POST['stage'] = "";
     </style>
 </head>
 <body>
-<center><img id="logo" src="../image/logo.png"></img></center>
+<center><img id="logo" src="../image/logo_white.png"></img></center>
 <div id="pane">
 <h2>Welcome - Step <?php echo $stage; ?> of 3</h2>
     <hr></hr>

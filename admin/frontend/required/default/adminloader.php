@@ -1,12 +1,14 @@
 <?php
 
 if(isset($_SESSION['admin']['displayname'])){
+    include_once ADMIN_DEFAULT_THEME_DIR . "header.php";
 	include_once ADMIN_DEFAULT_THEME_DIR . "menu.php";
 }
 
 if(isset($_GET['adminpath'])){
     
     if(isset($_SESSION['admin']['displayname'])){
+        include_once ADMIN_DEFAULT_THEME_DIR . "header.php";
         include_once ADMIN_DEFAULT_THEME_DIR  . $_GET['adminpath'] . ".php"; 
     }else{
         header("location: /admin/");
