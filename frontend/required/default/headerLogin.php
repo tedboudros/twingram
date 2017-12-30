@@ -13,18 +13,21 @@
 </head>
 <body>
 
-	<nav class="fixed-top">
-		<a id="title" class="navbar-brand" style="padding: 0; background-image: url(<?php echo IMAGE_DIR . $site['site-image']; ?>);"></a>
-		<div id="headerRight" style="margin: 9px;" class="pull-right d-inline-block">
+<div id="masterContainer">
+		<div id="logindiv">
 			<form action="" method="POST">
-				<input type="text" placeholder="Username" name="username" class="loginInput"></input>
-				<input type="password" placeholder="Password" name="password" class="loginInput"></input>
-				<input type="submit" value="Login" name="submit" class="loginInput"></input>
+				<a style='background-image: url("<?php echo IMAGE_DIR; ?>logo.png");' class="logo"></a>
+				<span>Username:</span><input id="username" name="username" type="text"></input>
+				</br>
+				<span>Password:</span><input name="password" id="password" type="password"></input>
+				</br>
+				<input id="loginBtn" value="Login" type="submit" name="submit"></input>
 			</form>
 		</div>
-	</nav>
-	<div class="container mainContent">
-	<div class="content">
+		
+		<span  id="about">twingram© - 2017 - theodoreboudros</span>
+		
+</div>
 
 	<?php if(isset($_POST['submit'])){
         $login = loginUser($_POST['username'], $_POST['password']);

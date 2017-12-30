@@ -1,5 +1,81 @@
-body {
-	background-color: #ddd;
+*{
+	font-family: 'Raleway', sans-serif;
+}
+body{
+	background: #f0f0f0;
+	color: #333;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+#masterContainer{
+	width: 100vw;
+	height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logindiv{
+	background: #dfdfdf;
+	padding: 50px 20px;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #888;
+}
+#logindiv span {
+	width: 80px;
+	display: inline-block;
+	font-size: 15px;
+}
+#logindiv input {
+	width: 220px;
+	height: 30px;
+	padding: 5px;
+	margin: 5px 0px;
+	display: inline-block;
+	font-size: 15px;
+	outline: none;
+	transition: 0.2s;
+	border: 1px solid #aaa;
+}
+#logindiv input[type=submit] {
+	display: block;
+	width: 100%;
+	margin:  20px 0 0 0;
+	border: 0;
+	border-radius: 3px;
+	background-color: #29b0d0;
+	color: #fff;
+	height: 35px;
+}
+#logindiv input[type=submit]:hover {
+	background: #2990a0;
+	
+}
+.logo {
+	background-image: url(./logo.png);
+	background-size: contain;
+	filter: hue-rotate(120);
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 20px auto;
+}
+
+#about{
+	width: 100%;
+	text-align: center;
+	bottom: 20px;
+	position: fixed;
+	color: #777;
+	font-weight: 300;
+	text-shadow: 0 0 0px #b1b1b1;
 }
 html {
 	height: 100%;
