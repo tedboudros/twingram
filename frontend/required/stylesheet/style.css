@@ -2,7 +2,7 @@
 	font-family: 'Raleway', sans-serif;
 }
 body{
-	background: #f0f0f0;
+	background: #d6d6d6;
 	color: #333;
 	margin: 0;
 	font-family: 'Raleway', sans-serif;
@@ -89,7 +89,7 @@ html {
 
 input[type=submit]{
 	padding: 10px;
-	background-color: #0077ff;
+	background-color: #29b0d0;
 	color: #fff;
 	border: 0;
 	border-radius: 3px;
@@ -114,21 +114,19 @@ input[type=text]:hover, input[type=password]:hover{
 }
 
 input[type=text]:focus, input[type=password]:focus{
-	border: 1px solid #03f;
+	border: 1px solid #29b0d0;
 }
 nav {
 	height: 60px;
-	background: #0077ff;
+	background: #fff;
 	display: block;
 	padding: 0;
 	-webkit-box-shadow: 0 0px 2px #777;
 	-moz-box-shadow: 0 0px 2px #777;
 	box-shadow: 0 0px 2px #777;
 	z-index: 9999;
-}
-.headerScrolled{
-	box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20px rgba(12,13,14,0.035), 0 1px 1px rgba(12,13,14,0.025);	
-	background-color: rgba(255,255,255,0.9);
+	color: #333;
+	box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20px rgba(12,13,14,0.035), 0 1px 1px rgba(12,13,14,0.025);
 }
 #title {
 	width: 80px;
@@ -141,7 +139,6 @@ nav {
 	margin: 0;
 	height: 59px;
 	min-width: 60px;
-	border-right: 1px solid #0332b34f;
 	cursor: pointer;
 	max-width: 200px;
 }
@@ -150,55 +147,54 @@ nav {
 	width: 250px;
 	height: 40px;
 	margin: 10px 25px;
-	background-color: #fff;
+	background-color: #29b0d0;
 	position: absolute;
+	border: 0;
+	box-shadow: 0 0 2px #ddd;
+	color: #fff;
+}
+#search::placeholder{
+	color: #ddd;
 }
 #headerRight {
 	height: 60px;
 	margin: 0;
 }
 .headerButton {
-	height: 60px;
-	max-height: 60px;
-	min-width: 60px;
-	vertical-align: top;
-	display: inline-block;
-	background-color: transparent;
-	border: 0;
-	margin: 0;
-	color: #fff;
-	border-left: 1px solid #0332b34f;
-	outline: 0;
-	padding: 0;
+    margin: 10px 5px;
+    background-color: #29b0d0;
+    color: #fff;
+    min-width: 40px;
+    border: 0;
+    border-radius: 4px;
+	height: 40px;
+	box-shadow: 0 0 3px #cccccc;
 }
 .headerButton:hover {
 	background: #f0f0f0;
 	transition: 0.2s;
-	color: #000;
 }
 .headerText {
 	font-weight: 400;
 	font-size: 15px;
-	padding: 12.5px 5px;
-	margin: 5px;
+	padding: 0;
+	margin: 9px 12px 9px 2px;
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: top;
 	text-align: center;
 }
 .userPhoto {
-	width: 50px;
-	height: 50px;
+	width: 30px;
+	height: 30px;
 	margin: 5px;
 	display: inline-block;
-	border-radius: 100%;
-    position: relative;
-	vertical-align: top;
+	border-radius: 15px;
 	background-size: contain;
 }
 
 .mainContent{
 	padding-top: 100px;
-	background-color: #fff;
+	background-color: #f6f6f6;
 	padding-bottom: 40px;
 	box-shadow: 0 0 20px 2px #aaa;
 	min-height: 100%;
@@ -215,9 +211,12 @@ nav {
 	background-color: #fff;
 	border-radius: 3px;
 	border: 1px solid #ccc;
-	box-shadow: 0 10px 0px 0px #0077cc, 0 10px 10px 0px #888;
+	box-shadow: 0 10px 0px 0px #29b0d0, 0 4px 8px 0 rgba(0,0,0,0.2);
 	display: block;
-	
+	transition: 0.3s;
+}
+.post:hover {
+	box-shadow: 0 10px 0px 0px #2292ac, 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .post .row > .col > *{
 	display: inline-block;
@@ -238,7 +237,6 @@ nav {
 	width: 100%;
 	left: 0;
 	height: 60px;
-	display: block;
 	bottom: 0;
 	left: 15px;
 	position: absolute;
@@ -260,9 +258,11 @@ nav {
 	color: #555;
 	position: relative;
 	bottom: 0;
-	outline: 0;
 	transition: 0.2s;
 	margin: 10px;
+}
+.reactButton:focus{
+	outline: none;
 }
 .react > input[type=submit]{
 	background: #eee;
@@ -272,7 +272,7 @@ nav {
 .react > input[type=submit]:hover {
 	background: #e0e0e0;
 	transition: 0.2s;
-	color: #03f;
+	color: #29b0d0;
 }
 .reactButton:hover {
 	background-color: #555;
@@ -282,13 +282,15 @@ nav {
 }
 
 ._thumbsup:hover {
-	background-color: #03f;
+	background-color: #29b0d0;
 }
 
 ._heart:hover {
 	background-color: #f03;
 }
-
+._comments{
+	
+}
 ._comments:hover {
 	background-color: #555;
 }
@@ -296,16 +298,18 @@ nav {
 	background-color: #590;
 }
 .comments {
-	width: 800px;
 	left: 0;
 	height: 0px;
-	margin-top: 30px;
 	position: relative;
     background-color: #f4f4f4;
     overflow: hidden;
 	border: 0;
 	padding: 0;
 	border-top: 1px solid #ddd;
+	display: block;
+	overflow-y: scroll;
+	max-height: 199px;
+	padding: 10px 10px 10px 0;
 }
 .UpostText {
 	display: block;
@@ -326,7 +330,7 @@ nav {
 }
 .UpostText:focus {
 	transition: 0.2s;
-	border: 1px solid #03f;
+	border: 1px solid #29b0d0;
 }
 hr { 
 	border: 0; 
@@ -366,4 +370,41 @@ hr {
 #register h3 {
 	margin-top: 10px;
 	font-size: 20px;
+}
+
+.comment{
+	background: white;
+	max-height: 50px;
+	padding: 5px;
+	border-radius: 10px;
+	margin: 15px;
+	box-shadow: 0 0 15px #d8d8d8;
+	display: block;
+}
+.commentUserImage{
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	margin: 5px;
+}
+.commentUser{
+	font-weight: 700;
+}
+.commentText{
+	font-weight: 200;
+    font-family: monospace;
+}
+.commentInput{
+	height: 40px;
+	width: 200px;
+	border-radius: 20px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+	background: #fff;
+	color: #555;
+	position: relative;
+	bottom: 0;
+	outline: 0;
 }

@@ -12,14 +12,7 @@
 	<title><?php echo $site['site-name']; ?></title>
 	<script>
 
-		$(window).scroll(function() {    
-			var scroll = $(window).scrollTop();    
-			if (scroll > 80) {
-				$("nav").addClass("headerScrolled");
-			}else{
-				$("nav").removeClass("headerScrolled");
-			}
-		});
+
 
 		$(document).ready(function () {
 			$(".headerButton[title=Logout]").click(function () { //To logout
@@ -40,10 +33,10 @@
 	<nav class="fixed-top">
 		<a id="title" class="navbar-brand" style="padding: 0; background-image: url(<?php echo IMAGE_DIR . $site['site-image']; ?>);"></a>
 		<input type="text" placeholder="Search" id="search"></input>
-		<div id="headerRight" class="pull-right d-inline-block">
+		<div id="headerRight" class="pull-right d-flex">
 			<div class="headerButton">
 				<a class="userPhoto" style="background-image: url(<?php echo IMAGE_DIR . $_SESSION['image']; ?>);"></a>
-				<span class="align-middle headerText"><?php echo $_SESSION['displayname']; ?></span>
+				<a class="headerText"><?php echo $_SESSION['displayname']; ?></a>
 			</div>
 			<button class="headerButton" data-toggle="tooltip" title="Logout" data-original-title="Logout">
 				<i class="fa fa-bars"></i>
